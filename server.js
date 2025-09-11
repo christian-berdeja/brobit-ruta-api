@@ -5,7 +5,11 @@ import dotenv from "dotenv";
 // import { Server } from "socket.io";
 import http from "http";
 
-import productRoutes from "./routes/productRoutes.js"
+// routes
+import productRoutes from "./routes/productRoutes.js";
+import saleRoutes from "./routes/saleRoutes.js";
+import storeRoutes from "./routes/storeRoutes.js";
+import inventoryRoutes from "./routes/inventoryRoutes.js";
 
 dotenv.config();
 const app = new express();
@@ -31,6 +35,9 @@ mongoose
 
 // use-routers
   app.use('/api/product',productRoutes);
+  app.use('/api/sale',saleRoutes);
+  app.use('/api/store',storeRoutes);
+  app.use('/api/inventory',inventoryRoutes);
 
 server.listen(PORT, ()=> {
   console.log(
