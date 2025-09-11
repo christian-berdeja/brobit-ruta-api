@@ -26,7 +26,7 @@ export const getAllProducts = async (req, res) => {
 
         return products;
     } catch (error) {
-        console.error("Error al obtener las reservaciones:", error);
+        console.error("Error al obtener los productos:", error);
         throw error;
     }
 }
