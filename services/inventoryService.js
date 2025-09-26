@@ -1,8 +1,7 @@
 import Inventory from "../models/inventory.js";
 
 export const createInventorie = async (inventoryData) => {
-  try {
-
+  try {    
     // agrega varios registros de inventario
     if (Array.isArray(inventoryData)) {
       return await Inventory.insertMany(inventoryData);
