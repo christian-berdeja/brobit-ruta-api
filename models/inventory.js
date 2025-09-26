@@ -1,9 +1,8 @@
 import mongoose from "mongoose";
 
 const inventory = new mongoose.Schema({
-    idStore: String,
-    idProduct: String,
-    productCode: String,
+    storeId: String,
+    codigoFabrica: String,
     price: Number,
     cost: Number,
     stock: Number,

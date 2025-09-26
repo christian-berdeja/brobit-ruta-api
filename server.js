@@ -10,6 +10,8 @@ import productRoutes from "./routes/productRoutes.js";
 import saleRoutes from "./routes/saleRoutes.js";
 import storeRoutes from "./routes/storeRoutes.js";
 import inventoryRoutes from "./routes/inventoryRoutes.js";
+import singleInventoryRoutes from "./routes/singleInventoryRoutes.js";
+import singleInventoryLogRoutes from "./routes/SingleInventoryLogRoutes.js";
 
 dotenv.config();
 const app = new express();
@@ -38,6 +40,8 @@ mongoose
   app.use('/api/sale',saleRoutes);
   app.use('/api/store',storeRoutes);
   app.use('/api/inventory',inventoryRoutes);
+  app.use('/api/singleInventory', singleInventoryRoutes);
+  app.use('/api/singleInventoryLog', singleInventoryLogRoutes);
 
 server.listen(PORT, ()=> {
   console.log(

@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 const sale = new mongoose.Schema({
     saleId: String,
     storeId: String,
-    productId: String,
+    codigoFabrica: String,
     quantity: Number,
     saleDate: { type: Date, default: Date.now }
 })
